@@ -1,0 +1,42 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #fff1e0;
+  height: 2em;
+  padding: 2em;
+}
+header nav {
+  display: flex;
+  justify-content: space-around;
+}
+.Presentation {
+  display: flex;
+  justify-content: center;
+}
+.imgRose {
+  margin-right: 5em;
+}
+h1 {
+  color: blue;
+  font-size: 60px;
+  text-align: center;
+}
+.container {
+  display: flex;
+}
+section {
+  justify-content: center;
+}
+article {
+  background: pink;
+  width: 50%;
+  border: 1px solid black;
+  border-radius: 1em;
+  margin: 2em;
+}
+.photos {
+  justify-content: center;
+}
