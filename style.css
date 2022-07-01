@@ -3,40 +3,71 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/*Header*/
+
+.logo {
+  position: absolute;
+  font-family: "Inspiration";
+  font-size: 40px;
+  transform: rotate(-10deg);
+  align-items: center;
+}
 header {
-  background-color: #fff1e0;
+  background-color: #fff6ea;
   height: 2em;
-  padding: 2em;
+  padding: 1.5em;
 }
-header nav {
+nav li {
+  list-style-type: none;
+}
+header nav,
+ul,
+li {
+  margin-top: 0px;
   display: flex;
+  margin-right: 2em;
   justify-content: space-around;
+  align-items: center;
 }
-.Presentation {
+.navMenu {
+  text-decoration: none;
+  color: black;
+}
+.navMenu:visited {
+  color: black;
+}
+
+/*ImgNoirBlanc - ImgCouleur*/
+
+.imgPresentation {
   display: flex;
+  margin: 3em;
   justify-content: center;
 }
-.imgRose {
-  margin-right: 5em;
+.imgNoirCouleur {
+  width: 25em;
+  height: 25%;
+  margin-right: 1em;
+  clip-path: circle();
+  filter: grayscale(1);
 }
-h1 {
-  color: blue;
-  font-size: 60px;
+.imgNoirCouleur:hover {
+  filter: grayscale(0);
+}
+
+/*Type photos*/
+
+.typeImg {
   text-align: center;
+  font-size: 24px;
 }
-.container {
-  display: flex;
-}
-section {
-  justify-content: center;
-}
-article {
-  background: pink;
-  width: 50%;
-  border: 1px solid black;
-  border-radius: 1em;
-  margin: 2em;
-}
-.photos {
-  justify-content: center;
+
+/*Citation Frielander*/
+
+.quoteFrielander {
+  background-color: #e5e0ff;
+  text-align: center;
+  height: 5em;
+  font-size: 20px;
 }
