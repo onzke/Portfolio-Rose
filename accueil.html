@@ -4,41 +4,117 @@
     <meta charset="utf-8" />
     <title>Roselyne Fournier - Book</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inspiration&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inspiration&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
+  <body>
+    <!-- Header et barre de navigation -->
 
     <header>
       <div class="logo">Rose</div>
-      <ul>
-        <li><a class="navMenu" href="accueil.html">Accueil</a></li>
-        <li><a class="navMenu" href="apropos">A propos</a></li>
-        <li><a class="navMenu" href="portfolio.html">Portfolio</a></li>
-        <li><a class="navMenu" href="contact.html">Contactez moi</a></li>
-      </ul>
+      <nav>
+        <ul>
+          <li><a class="navMenu" href="accueil.html">Accueil</a></li>
+          <li><a class="navMenu" href="apropos">A propos</a></li>
+          <li><a class="navMenu" href="portfolio.html">Portfolio</a></li>
+          <li><a class="navMenu" href="contact.html">Contactez moi</a></li>
+        </ul>
       </nav>
     </header>
 
+    <!-- Caroussel - Scroll horizontal -->
 
-     <section>
+    <section>
       <div class="imgPresentation">
-    <img class="imgNoirCouleur" id="imgTigreBlanc" src="Select Photos/PairiDaiza.jpg" alt="imgTigreBlanc">
-    <img class="imgNoirCouleur" id="imgAraignee" src="Select Photos/PairiDaiza7.jpg" alt="imgAraignee">
-    <img class="imgNoirCouleur" id="imgOiseau" src="Select Photos/PairiDaiza1.jpg" alt="imgOiseau">
-     </div>
-    <div class="typeImg"> Photographie animalière & nature </div>
+        <img
+          class="imgNoirCouleur"
+          id="imgTigreBlanc"
+          src="Select Photos/PairiDaiza.jpg"
+          alt="imgTigreBlanc"
+        />
+        <img
+          class="imgNoirCouleur"
+          id="imgAraignee"
+          src="Select Photos/PairiDaiza7.jpg"
+          alt="imgAraignee"
+        />
+        <img
+          class="imgNoirCouleur"
+          id="imgOiseau"
+          src="Select Photos/PairiDaiza1.jpg"
+          alt="imgOiseau"
+        />
+        <img
+          class="imgNoirCouleur"
+          id="imgLion"
+          src="Select
+        Photos/PairiDaiza5.jpg"
+          alt="imgLion"
+        />
+
+        <img
+          class="imgNoirCouleur"
+          id="imgMeduse"
+          src="Select Photos/PairiDaiza6.jpg"
+          alt="imgMeduse"
+        />
+      </div>
+
+      <div class="typeImg">Photographie animalière & nature</div>
     </section>
 
     <section class="quoteFrielander">
-      <p>"Je ne vois que la photographie qui puisse, autant que le baiser, faire surgir de ce que nous croyons une chose a aspect défini les cent autres choses qu’elle est tout aussi bien,
-     puisque chacune est relative à une perspective non moins légitime."</p>
+      <p>
+        "Je ne vois que la photographie qui puisse, autant que le baiser, faire
+        surgir de ce que nous croyons une chose a aspect défini les cent autres
+        choses qu’elle est tout aussi bien, puisque chacune est relative à une
+        perspective non moins légitime."
+      </p>
       <span>Lee Frielander</span>
     </section>
 
-    <footer>
+    <section class="aPropos">
+      <p>
+        Passionnée par la photographie, pratiquant depuis 15 ans, lors de mon
+        premier voyage j'ai compris qu'un "clic" pouvait déclencher une petite
+        étincelle. Une émotion, une sensation. Un instant unique.
+      </p>
+    </section>
 
+    <section id="formSection">
+      <form
+        method="post",
+        action="javascript:alert('On envoie le formulaire');"
+      >
+        <div class="group-1">
+          <div class="group-a">
+            <label id="labelName" for="fname">Nom</label>
+            <input id="fname" type="text" placeholder="Votre nom et prénom" />
+            <label id="labelSubject" for="fsubject">Sujet</label>
+            <input
+              id="fsubject"
+              type="text"
+              placeholder="L'objet de votre message"
+            />
+            <label id="labelMail" for="fmail">Email</label>
+            <input id="fmail" type="email" placeholder="Votre email" />
+          </div>
+          <div class="group-b">
+            <label id="labelMessage" for="fmessage">Message</label>
+            <textarea id="fmessage" placeholder="Votre message"></textarea>
+          </div>
+        </div>
+        <div class="group-2">
+          <input id="subButton" type="submit" value="Envoyer" />
+        </div>
+      </form>
+    </section>
 
-    </footer>
+    <footer></footer>
 
+    <script src="script.js"></script>
   </body>
 </html>
