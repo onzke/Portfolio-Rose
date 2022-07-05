@@ -18,9 +18,9 @@
       <nav>
         <ul>
           <li><a class="navMenu" href="accueil.html">Accueil</a></li>
-          <li><a class="navMenu" href="apropos">A propos</a></li>
+          <li><a class="navMenu" href="#aPropos">A propos</a></li>
           <li><a class="navMenu" href="portfolio.html">Portfolio</a></li>
-          <li><a class="navMenu" href="contact.html">Contactez moi</a></li>
+          <li><a class="navMenu" href="#formSection">Contactez moi</a></li>
         </ul>
       </nav>
     </header>
@@ -32,33 +32,32 @@
         <img
           class="imgNoirCouleur"
           id="imgTigreBlanc"
-          src="Select Photos/PairiDaiza.jpg"
+          src="Select Photos/PanthereNeige.jpg"
           alt="imgTigreBlanc"
         />
         <img
           class="imgNoirCouleur"
           id="imgAraignee"
-          src="Select Photos/PairiDaiza7.jpg"
+          src="Select Photos/Mygale.jpg"
           alt="imgAraignee"
         />
         <img
           class="imgNoirCouleur"
           id="imgOiseau"
-          src="Select Photos/PairiDaiza1.jpg"
+          src="Select Photos/Oiseau.jpg"
           alt="imgOiseau"
         />
         <img
           class="imgNoirCouleur"
           id="imgLion"
-          src="Select
-        Photos/PairiDaiza5.jpg"
+          src="Select Photos/Lion.jpg"
           alt="imgLion"
         />
 
         <img
           class="imgNoirCouleur"
           id="imgMeduse"
-          src="Select Photos/PairiDaiza6.jpg"
+          src="Select Photos/Meduse.jpg"
           alt="imgMeduse"
         />
       </div>
@@ -66,54 +65,53 @@
       <div class="typeImg">Photographie animalière & nature</div>
     </section>
 
-    <section class="quoteFrielander">
-      <p>
-        "Je ne vois que la photographie qui puisse, autant que le baiser, faire
-        surgir de ce que nous croyons une chose a aspect défini les cent autres
-        choses qu’elle est tout aussi bien, puisque chacune est relative à une
-        perspective non moins légitime."
-      </p>
-      <span>Lee Frielander</span>
+    <section class="quoteConfucius">
+      <p>"Une image vaut mille mots."</p>
+      <span>Confucius</span>
     </section>
 
-    <section class="aPropos">
-      <p>
-        Passionnée par la photographie, pratiquant depuis 15 ans, lors de mon
-        premier voyage j'ai compris qu'un "clic" pouvait déclencher une petite
-        étincelle. Une émotion, une sensation. Un instant unique.
-      </p>
-    </section>
+    <div class="containeraPropos">
+      <section class="aPropos" id="aPropos">
+        <p>
+          J'ai compris qu'un "clic" est révélateur d'un instant unique, presque magique, lors de ma
+          premier voyage. Et puis, j'ai continué de voyager et de sillonner les
+          chemins, de lever la tête et simplement d'observer. Mon appareil photo
+          m'a suivi au fil des années. Actuellement en reconversion vers un
+          autre métier, je suis en formation pour un titre professionnel
+          Concepteur Développeur d'Applications. Ainsi, afin de réunir une
+          passion qui a perduré et ce plaisir de programmer, je vous présente
+          mon portfolio.
+        </p>
+      </section>
+
+        <img class="Rose" src="Select Photos/Moi.jpg" alt="Rose" />
+
+    </div>
 
     <section id="formSection">
-      <form
-        method="post",
-        action="javascript:alert('On envoie le formulaire');"
-      >
-        <div class="group-1">
-          <div class="group-a">
-            <label id="labelName" for="fname">Nom</label>
-            <input id="fname" type="text" placeholder="Votre nom et prénom" />
-            <label id="labelSubject" for="fsubject">Sujet</label>
-            <input
-              id="fsubject"
-              type="text"
-              placeholder="L'objet de votre message"
-            />
-            <label id="labelMail" for="fmail">Email</label>
-            <input id="fmail" type="email" placeholder="Votre email" />
-          </div>
-          <div class="group-b">
-            <label id="labelMessage" for="fmessage">Message</label>
-            <textarea id="fmessage" placeholder="Votre message"></textarea>
-          </div>
-        </div>
-        <div class="group-2">
-          <input id="subButton" type="submit" value="Envoyer" />
+      <form method="post" action="javascript:alert('On envoie le formulaire');">
+        <div class="formFlex">
+          <label id="labelName" for="inputName">Nom</label>
+          <input id="inputName" type="text" placeholder="Votre nom" />
+          <label id="labelMail" for="inputMail">Email</label>
+          <input id="inputMail" type="email" placeholder="Votre email" />
+          <label id="labelMessage" for="fmessage">Un petit mot ?</label>
+          <textarea id="inputMessage" placeholder="Votre message"></textarea>
+          <input id="buttonEnvoi" type="submit" value="Envoyer" />
         </div>
       </form>
     </section>
 
-    <footer></footer>
+    <footer>
+      <div class="logos">
+        <a href="https://www.facebook.com/aza.photographies">
+          <img class="logoPage" src="Select Photos/logoFB.jpg" alt="logoFB"
+        /></a>
+        <a href="https://www.linkedin.com/in/roselyne-fournier-3b546b176/">
+          <img class="logoPage" src="Select Photos/logoLinkedin.jpg" alt="logoLinkedin" />
+        </a>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
   </body>

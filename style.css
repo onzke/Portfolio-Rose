@@ -1,4 +1,5 @@
 body {
+  background-color: #fff6ea;
   font-family: "Georgia", Times, serif;
   margin: 0;
   padding: 0;
@@ -13,7 +14,7 @@ body {
   transform: rotate(-10deg);
 }
 header {
-  background-color: #fff6ea;
+  background-color: #bf8a3d;
   height: 2em;
   padding: 1.5em;
 }
@@ -36,22 +37,25 @@ ul {
 
 .navMenu {
   text-decoration: none;
+  font-size: 18px;
   color: black;
+  padding: 0.5em;
 }
-.navMenu:visited {
-  color: black;
+.navMenu:hover {
+  color: white;
+  padding: 0.5em;
 }
 
 /*ImgNoirBlanc - ImgCouleur*/
 
 .imgPresentation {
   display: flex;
+  justify-content: space-around;
   margin: 3em;
-  justify-content: center;
 }
 .imgNoirCouleur {
-  width: 25em;
-  height: 25%;
+  width: 15em;
+  max-height: 15%;
   margin-right: 1em;
   clip-path: circle();
   filter: grayscale(1);
@@ -69,39 +73,205 @@ ul {
   font-size: 24px;
 }
 
-/*Citation Frielander*/
+/*Citation Confucius*/
 
-.quoteFrielander {
-  background-color: #bf8a3d;
+.quoteConfucius {
   text-align: center;
   line-height: 1.5em;
   height: 6em;
   margin: 0;
-  font-size: 18px;
+  font-size: 15px;
+  font-style: italic;
 }
 
-/*A propos*/
+/*A propos - Contact*/
+
+.containeraPropos {
+  display: flex;
+  justify-content: space-around;
+}
 
 .aPropos {
-  background: gray;
-  line-height: 1.5em;
-  height: 10em;
-  width: 40em;
+  background: #b48b4f;
+  text-align: center;
   margin: 1em;
+  line-height: 1.5em;
+  flex-wrap: wrap;
 }
 
-/*Caroussel*/
+.Rose {
+  max-width: 18em;
+  max-height: 14em;
+  margin: 1em;
+  clip-path: circle();
+}
 
-.containerImgSlider {
-  margin: 0em;
-  max-width: 120em;
+/*Formulaire*/
+
+.formFlex {
+  margin: auto;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  line-height: 2em;
+  width: 80em;
 }
 
-.imgSlider {
+.formFlex input {
+  border: 1px solid black;
+  border-radius: 2em;
+  padding: 1em;
+}
+
+.formFlex textarea {
+  border: 1px solid black;
+  border-radius: 2em;
+  padding: 1em;
+}
+
+.formFlex input[type="submit"] {
+  background-color: #b48b4f;
+  width: 40em;
+  color: white;
+  margin: auto;
+  margin-top: 1em;
+}
+
+.formFlex input[type="submit"]:hover {
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+/* Footer */
+
+.logos {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.logos .logoPage {
+  background-color: #fff6ea;
+  cursor: pointer;
+  max-width: 1.5em;
+  margin: 0em 1em 0em 0em;
+  max-height: 1.5em;
+}
+.logoPage:hover {
+  opacity: 75%;
+}
+footer {
+  background-color: #fff6ea;
+  margin-top: 2em;
+  padding: 2em;
+}
+/*Portfolio*/
+
+.navPortfolioFilter {
+  display: flex;
+  justify-content: flex-end;
+}
+
+svg {
+  width: 5em;
+  height: 5em;
+  margin-left: 6em;
+  fill: #bf8a3d;
+  stroke: none;
+  cursor: pointer;
+  transform: rotateX(-20%);
+}
+svg:hover {
+  fill: #808000;
+  fill-opacity: 75%;
+  animation: animMiniCamera 1s ease 1 normal forwards;
+}
+@keyframes animMiniCamera {
+	0%, 100% {
+		transform: translateX(0);
+	} 10%, 30%, 50%, 70% {
+		transform: translateX(-10px);
+	} 20%, 40%, 60% {
+		transform: translateX(10px);
+	} 80% {
+		transform: translateX(8px);
+	} 90% {
+		transform: translateX(-8px);
+	}
+}
+
+.filterCategory.active {
+  background-color: #808000;
+  border: #808000 1px solid;
+}
+
+
+.buttonPortfolio {
+  margin: 2em;
+  padding: 1em;
+  border: none;
+  background-color: #808000;
+  cursor: pointer;
+  transition: 600ms ease;
+}
+
+.buttonPortfolio:hover {
+  color: white;
+  padding: auto;
+  font-weight: bold;
+}
+.buttonPortfolio:focus {
+  color: #808000;
+  background-color: #fff6ea;
+  font-weight: bold;
+}
+
+#portfolioEnsemble {
+  margin: 2em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#portfolioEnsemble .imgBox {
+  margin: 1em;
+  max-width: 120em;
+  max-height: 100em;
+}
+
+#portfolioEnsemble .imgBox.cache {
+  display: none;
+}
+
+.imgBox {
   height: 15em;
   margin-right: 1em;
-  opacity: 75%;
   filter: grayscale(1);
+}
+.imgBox:hover {
+  filter: grayscale(0);
+}
+
+/* Adaptation du design via media queries*/
+
+@media screen and (max-width: 640px) {
+  body {
+    display: block;
+  }
+  .imgPresentation {
+    display: flex;
+  }
+  .imgNoirCouleur {
+    overflow: hidden;
+  }
+  .formFlex {
+    display: block;
+    clear: both;
+    width: 30em;
+    margin: 1em;
+  }
+  .formFlex input {
+    margin: 1em;
+  }
 }
