@@ -15,61 +15,137 @@
     <nav>
       <ul>
         <li><a class="navMenu" href="accueil.html">Accueil</a></li>
-        <li><a class="navMenu" href="#aPropos">A propos</a></li>
+        <li><a class="navMenu" href="accueil.html #aPropos">A propos</a></li>
         <li><a class="navMenu" href="portfolio.html">Portfolio</a></li>
-        <li><a class="navMenu" href="accueil.html">Contactez moi</a></li>
+        <li>
+          <a class="navMenu" href="accueil.html #formulaireSection"
+            >Contactez moi</a
+          >
+        </li>
       </ul>
     </nav>
   </header>
 
   <body>
-<div class="navPortfolioFilter">
-
-    <a href="accueil.html"><svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 1280.000000 790.000000" preserveAspectRatio="xMidYMid meet">
-<metadata>
-</metadata>
-<g transform="translate(0.000000,790.000000) scale(0.100000,-0.100000)">
-<path d="M445 7888 c-90 -16 -207 -60 -279 -154 -76 -75 -138 -190 -155 -288 -15 -84 -15 -6908 0 -6992 38 -213 230 -405 443 -443 84 -15 11808 -15 11892 0 213 38 405 230 443 443 15 84 15 6908 0 6992 -38 213 -230 405 -443 443 -78 14 -11827 13 -11901 -1z m11429 -563 c115 -30 215 -113 269 -225 30 -61 32 -71 32 -175 -1 -98 -4 -116 -27 -168 -31 -66 -112 -155 -173 -192 -97 -56 -72 -55 -1170 -55 -655 0 -1026 4 -1055 11 -195 45 -330 227 -318 428 7 105 38 179 104 251 63 68 120 104 196 124 82 22 2057 23 2142 1z m-5049 -139 c167 -24 349 -62 498 -106 703 -205 1321 -647 1740 -1243 312 -444 495 -916 568 -1465 24 -184 30 -551 10 -722 -74 -651 -303 -1210 -697 -1705 -113 -142 -358 -387 -499 -499 -484 -384 -1034 -614 -1656 -693 -184 -23 -575 -23 -754 1 -627 82 -1179 314 -1658 698 -133 106 -391 365 -496 498 -285 359 -491 774 -606 1216 -118 456 -134 962 -44 1419 197 1002 832 1834 1744 2285 392 194 716 284 1200 334 89 9 545 -4 650 -18z"/>
-<path d="M6141 5974 c-845 -114 -1533 -756 -1706 -1590 -139 -670 66 -1355 550 -1839 789 -790 2063 -792 2855 -5 312 310 508 699 577 1142 23 153 23 433 -1 583 -9 61 -31 162 -47 225 -208 788 -881 1380 -1692 1485 -145 18 -395 18 -536 -1z"/>
-</g>
-</svg>
-    </a>
-
-        <button class="buttonPortfolio filterCategory active" data-keyword="all">En vrac</button>
-        <button class="buttonPortfolio filterCategory" data-keyword="animaux">Animaux</button>
-        <button class="buttonPortfolio filterCategory" data-keyword="nature">Nature</button>
-        <button class="buttonPortfolio filterCategory" data-keyword="architecture">Architecture</button>
+    <div class="navPortfolioFilter">
+      <button class="buttonPortfolio filterCategory active" data-keyword="all">
+        En vrac
+      </button>
+      <button class="buttonPortfolio filterCategory" data-keyword="animaux">
+        Animaux
+      </button>
+      <button class="buttonPortfolio filterCategory" data-keyword="nature">
+        Nature
+      </button>
+      <button
+        class="buttonPortfolio filterCategory"
+        data-keyword="architecture"
+      >
+        Architecture
+      </button>
     </div>
 
     <div id="portfolioEnsemble">
       <div class="image keyNature all">
-        <img class="imgBox"data-img="nature" src="Select Photos/Nord2.jpg"alt="imgPlageNord"/>
+        <a href="SelectPhotos/Nord2.jpg">
+          <img
+            class="imgBox"
+            data-img="nature"
+            src="SelectPhotos/Nord2.jpg"
+            alt="imgPlageNord"
+        /></a>
       </div>
       <div class="image keyNature all">
-        <img class="imgBox"data-img="nature" src="Select Photos/Norway1.jpg" alt="imgNorvegeFjord"/>
+        <a href="SelectPhotos/Norway1.jpg">
+          <img
+            class="imgBox"
+            data-img="nature"
+            src="SelectPhotos/Norway1.jpg"
+            alt="imgNorvegeFjord"
+        /></a>
       </div>
       <div class="image keyNature all">
-        <img class="imgBox" data-img="nature" src="Select Photos/Vosges.jpg" alt="imgVosges"/>
-      </div>
-      <div class="image keyAnimaux all">
-        <img class="imgBox" data-img="animaux" src="Select Photos/Guepe.jpg" alt="imgGuepe"/>
-      </div>
-      <div class="image keyNature all">
-      <img class="imgBox" data-img="nature" src="Select Photos/Champs.jpg" alt="imgChamps">
-      </div>
-      <div class="image keyAnimaux all">
-      <img class="imgBox" data-img="animaux" src="Select Photos/BorderNoir.jpg" alt="imgBorder">
-      </div>
-      <div class="image keyNature all">
-      <img class="imgBox" data-img="nature" src="Select Photos/LeversoleilNord2.jpg" alt="imgSoleil">
+        <a href="SelectPhotos/Vosges.jpg">
+          <img
+            class="imgBox"
+            data-img="nature"
+            src="SelectPhotos/Vosges.jpg"
+            alt="imgVosges"
+        /></a>
       </div>
       <div class="image">
-      <img class="imgBox" data-img="" src="Select Photos/jpg" alt="img">
+        <a href="SelectPhotos/PhotoIndustrieLille1.JPG">
+          <img
+            class="imgBox"
+            data-img="architecture"
+            src="SelectPhotos/PhotoIndustrieLille1.JPG"
+            alt="imgLille"
+        /></a>
+      </div>
+      <div class="image keyAnimaux all">
+        <a href="SelectPhotos/Guepe.jpg">
+          <img
+            class="imgBox"
+            data-img="animaux"
+            src="SelectPhotos/Guepe.jpg"
+            alt="imgGuepe"
+        /></a>
+      </div>
+      <div class="image keyNature all">
+        <a href="SelectPhotos/Champs.jpg">
+          <img
+            class="imgBox"
+            data-img="nature"
+            src="SelectPhotos/Champs.jpg"
+            alt="imgChamps"
+        /></a>
+      </div>
+      <div class="image keyAnimaux all">
+        <a href="SelectPhotos/BorderNoir.jpg">
+          <img
+            class="imgBox"
+            data-img="animaux"
+            src="SelectPhotos/BorderNoir.jpg"
+            alt="imgBorder"
+        /></a>
       </div>
       <div class="image">
-      <img class="imgBox" data-img="" src="Select Photos/jpg" alt="img">
+        <a href="SelectPhotos/PhotoMairieLille1.JPG">
+          <img
+            class="imgBox"
+            data-img="architecture"
+            src="SelectPhotos/PhotoMairieLille1.jpg"
+            alt="imgLille"
+        /></a>
       </div>
+      <div class="image keyNature all">
+        <a href="SelectPhotos/LeverSoleilLille1.JPG">
+          <img
+            class="imgBox"
+            data-img="nature"
+            src="SelectPhotos/LeverSoleilLille1.JPG"
+            alt="imgSoleil"
+        /></a>
       </div>
-       <script src="script.js"></script>
+      <div class="image">
+        <a href="SelectPhotos/Scharko1.JPG">
+          <img
+            class="imgBox"
+            data-img="animaux"
+            src="SelectPhotos/Scharko1.JPG"
+            alt="imgBully"
+        /></a>
+      </div>
+      <div class="image">
+        <a href="SelectPhotos/PhotoRepuBeauxArtsLilleN&B1.JPG">
+          <img
+            class="imgBox"
+            data-img="architecture"
+            src="SelectPhotos/PhotoRepuBeauxArtsLilleN&B1.JPG"
+            alt="imgLille"
+        /></a>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>

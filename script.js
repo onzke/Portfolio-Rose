@@ -1,35 +1,60 @@
-// Portfolio - Filtre avec mots-clés pour type d'images.
+// Page Accueil - Ajout du bouton "Blog" dans le footer.
+// Variables d'entrée.
+
+
+
+// Page Portfolio - Filtre avec mots-clés pour type d'images.
 // Variables d'entrée
 
-let list = document.querySelectorAll('.buttonPortfolio');
-let itemBox = document.querySelectorAll('.imgBox');
+let boutonPortfolio = document.querySelectorAll(".buttonPortfolio");
+let imageBox = document.querySelectorAll(".imgBox");
 
-// Instructions
+// Instructions.
 
-for(let i = 0; i<list.length; i++){
-    list[i].addEventListener('click', function(){
-        for(let j = 0; j<list.length; j++){
-            list[j].classList.remove('active');
-        }
-        this.classList.add('active');
+for (let i = 0; i < boutonPortfolio.length; i++) {
+  boutonPortfolio[i].addEventListener("click", function () {
+    let dataFilter = this.getAttribute("data-keyword");
 
-        let dataFilter = this.getAttribute('data-keyword');
+    for (let k = 0; k < imageBox.length; k++) {
+      imageBox[k].classList.add("cache");
 
-        for(let k = 0; k<itemBox.length; k++){
-            itemBox[k].classList.remove('active');
-            itemBox[k].classList.add('cache');
-
-        if(itemBox[k].getAttribute('data-img') == dataFilter || dataFilter == "all"){
-            itemBox[k].classList.remove('cache');
-            itemBox[k].classList.add('active');
-        }
+      if (
+        imageBox[k].getAttribute("data-img") == dataFilter ||
+        dataFilter == "all"
+      ) {
+        imageBox[k].classList.remove("cache");
+      }
     }
-    })
+  });
 }
 
-//
-// Variables d'entrée
+// Animation - Appareil photo.
+// Variables d'entrée.
 
-var prendrePhoto = document.getElementsByClassName("clicCamera");
-var lancerPolaroid = document.getElementsByClassName("sortiePolaroid");
-var lancerFlash = document.getElementsByClassName("mesures");
+var imgPolaroid = "SelectPhotos/Moi.jpg";
+
+$(".clicCamera").mouseenter(function () {
+  $("#ejectionPolaroid").fadeIn();
+  $("#ejectionPolaroid").css({
+    background: "url(" + imgPolaroid + ")",
+    position: "absolute",
+    top: "220px",
+    right: "75px",
+    height: "80%",
+    width: "60%",
+    borderBottom: "20px solid white",
+    borderTop: "10px white solid",
+    borderLeft: "10px white solid",
+    borderRight: "10px white solid",
+  });
+  $(".mesures").css({ boxShadow: "0.5px 2px 2px 1px wheat" });
+});
+
+$(".clicCamera").mouseleave(function () {
+  $("#ejectionPolaroid").css({
+    display: "none",
+  });
+  $(".mesures").css({ boxShadow: "0px 0px 0px 0px black" });
+});
+
+$("containeraPropos").show();

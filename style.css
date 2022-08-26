@@ -84,57 +84,204 @@ ul {
   font-style: italic;
 }
 
-/*A propos - Contact*/
+/*A propos */
 
 .containeraPropos {
   display: flex;
   justify-content: space-around;
+  padding: 2em;
 }
 
-.aPropos {
+.aProposSection {
   background: #b48b4f;
-  text-align: center;
-  margin: 1em;
+  text-align: justify;
   line-height: 1.5em;
   flex-wrap: wrap;
+  padding: 2em;
 }
 
-.Rose {
-  max-width: 18em;
-  max-height: 14em;
-  margin: 1em;
-  clip-path: circle();
+.nomaPropos {
+  font-family: "Inspiration";
+  font-size: 48px;
+  padding: 0.5em;
 }
 
-/*Formulaire*/
+/* Animation Appareil Photo */
+
+.allCamera {
+  width: 400px;
+  height: 250px;
+  margin: 2em 0em 0em 4em;
+}
+
+.blocCamera {
+  position: relative;
+  margin: 50px auto;
+  width: 400px;
+  height: 250px;
+  border-radius: 30px;
+  background-color: #222222; /*Couleur de l'appareil photo*/
+}
+.flashCamera {
+  position: absolute;
+  left: 35px;
+  top: 35px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #f4fefe;
+  animation: animFlash 0.5s ease-out 0s infinite;
+}
+@keyframes animFlash {
+  75% {
+    background-color: red;
+  }
+}
+.clicCamera {
+  position: absolute;
+  left: 320px;
+  bottom: 180px;
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  background-color: midnightblue;
+  box-shadow: 2px 2px 2px 2px black;
+  outline: none;
+  z-index: 3;
+  cursor: pointer;
+  background-image: radial-gradient(
+    at center,
+    #838383 0%,
+    #838383 8%,
+    #161616 4%,
+    #161616 15%,
+    #222222 15%,
+    #222222 25%,
+    #333444 55%,
+    #111f23 70%,
+    #e4ecf3 60%,
+    #111111 40%,
+    #111111 55%,
+    #000000 55%,
+    #222444 750%
+  );
+}
+.clicCamera:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  box-shadow: 2px 2px black;
+  background-image: radial-gradient(
+    at center,
+    #838383 0%,
+    #838383 8%,
+    #161616 4%,
+    #161616 15%,
+    #222222 15%,
+    #222222 25%,
+    #333444 55%,
+    #111f23 70%,
+    #e4ecf3 60%,
+    #111111 40%,
+    #111111 55%,
+    #000000 55%,
+    #222444 750%,
+    #e4ecf3 1000%
+  );
+}
+#sortiePolaroid {
+  position: absolute;
+  right: 75px;
+  bottom: 30px;
+  width: 260px;
+  height: 20px;
+  background-image: linear-gradient(
+    rgb(43, 45, 56) 25%,
+    #494949 10%,
+    #494949 50%,
+    #494949 15%,
+    rgb(43, 45, 56) 25%
+  );
+  z-index: 1;
+}
+
+.colorCamera {
+  width: 40px;
+  height: 75px;
+  position: absolute;
+  bottom: 175px;
+  left: 185px;
+  background: linear-gradient(
+    to right,
+    red 15%,
+    orange 35%,
+    yellow 50%,
+    rgb(93, 179, 93) 70%,
+    blue 85%
+  );
+}
+
+.mesures {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-image: radial-gradient(
+    at center,
+    #838383 0%,
+    #838383 4%,
+    #161616 4%,
+    #161616 15%,
+    #222222 15%,
+    #222222 25%,
+    #3c3c3c 25%,
+    #3c3c3c 40%,
+    #111111 40%,
+    #111111 55%,
+    #b44b37 55%,
+    #b44b37 50%
+  );
+  position: absolute;
+  top: 60px;
+  left: 145px;
+  z-index: 0;
+}
+
+/* Footer */
+
+/* Formulaire de contact */
 
 .formFlex {
-  margin: auto;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  margin-left: 2em;
   line-height: 2em;
-  width: 80em;
+  width: 45em;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .formFlex input {
+  flex-direction: column;
   border: 1px solid black;
-  border-radius: 2em;
-  padding: 1em;
+  height: 2.5em;
+  width: 20em;
+  margin: 0em 1em 1em 1em;
 }
 
 .formFlex textarea {
   border: 1px solid black;
-  border-radius: 2em;
+  border-radius: 1em;
+  margin: 1em;
   padding: 1em;
+  width: 48em;
+  height: 5em;
 }
 
 .formFlex input[type="submit"] {
+  flex-direction: row;
   background-color: #b48b4f;
-  width: 40em;
+  width: 50em;
   color: white;
-  margin: auto;
-  margin-top: 1em;
+  line-height: 0.4em;
+  padding: 1.5em;
 }
 
 .formFlex input[type="submit"]:hover {
@@ -143,69 +290,67 @@ ul {
   font-weight: bold;
 }
 
-/* Footer */
+/* Accès au blog, au CV */
 
-.logos {
+.accesLiensSection {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  margin: 0em 0em 0em 4em;
+}
+
+.lienBlog,
+.lienCV {
+  line-height: 1.5em;
+  text-align: center;
+  margin: auto;
+  background-color: #808000;
+  width: 10em;
+  height: 2em;
+  padding: 2em;
+  text-decoration: none;
+  color: black;
+}
+.lienBlog:hover,
+.lienCV:hover {
+  color: white;
+  font-weight: bold;
+}
+
+/* Contact - Réseaux Sociaux*/
+
+.logosSection {
+  display: flex;
+  flex-direction: column;
   margin: auto;
 }
 
-.logos .logoPage {
+.logosSection .logoPage {
   background-color: #fff6ea;
   cursor: pointer;
   max-width: 1.5em;
-  margin: 0em 1em 0em 0em;
+  margin: 1em 1em 0em 0em;
   max-height: 1.5em;
 }
 .logoPage:hover {
   opacity: 75%;
 }
+
 footer {
+  display: flex;
+  justify-content: space-around;
   background-color: #fff6ea;
   margin-top: 2em;
   padding: 2em;
 }
-/*Portfolio*/
+
+/*Page Portfolio*/
+
+/* Barre de navigation */
 
 .navPortfolioFilter {
   display: flex;
   justify-content: flex-end;
 }
-
-svg {
-  width: 5em;
-  height: 5em;
-  margin-left: 6em;
-  fill: #bf8a3d;
-  stroke: none;
-  cursor: pointer;
-  transform: rotateX(-20%);
-}
-svg:hover {
-  fill: #808000;
-  fill-opacity: 75%;
-  animation: animMiniCamera 1s ease 1 normal forwards;
-}
-@keyframes animMiniCamera {
-	0%, 100% {
-		transform: translateX(0);
-	} 10%, 30%, 50%, 70% {
-		transform: translateX(-10px);
-	} 20%, 40%, 60% {
-		transform: translateX(10px);
-	} 80% {
-		transform: translateX(8px);
-	} 90% {
-		transform: translateX(-8px);
-	}
-}
-
-.filterCategory.active {
-  background-color: #808000;
-  border: #808000 1px solid;
-}
-
 
 .buttonPortfolio {
   margin: 2em;
@@ -227,51 +372,190 @@ svg:hover {
   font-weight: bold;
 }
 
+/* Portfolio - Affichage des photos */
+
 #portfolioEnsemble {
   margin: 2em;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  width: 80em;
 }
 
 #portfolioEnsemble .imgBox {
   margin: 1em;
-  max-width: 120em;
-  max-height: 100em;
 }
 
 #portfolioEnsemble .imgBox.cache {
   display: none;
 }
 
+/* Design des photos */
+
 .imgBox {
   height: 15em;
   margin-right: 1em;
   filter: grayscale(1);
+  max-width: 100em;
+  min-height: 20em;
+  max-height: 30em;
 }
 .imgBox:hover {
   filter: grayscale(0);
 }
 
+/* Page CV */
+/* Mise en page de l'image */
+
+.cvSection {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Adaptation du design via media queries*/
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 900px) {
   body {
     display: block;
+    width: 100%;
   }
   .imgPresentation {
-    display: flex;
+    max-width: 100%;
+    text-align: center;
   }
   .imgNoirCouleur {
-    overflow: hidden;
+    max-width: 20%;
+  }
+  .containeraPropos {
+    width: 80%;
+    margin: auto;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .allCamera {
+    width: 50%;
+    margin: auto;
   }
   .formFlex {
-    display: block;
+    display: flex;
     clear: both;
-    width: 30em;
-    margin: 1em;
+    width: 20em;
+    margin: auto;
   }
   .formFlex input {
     margin: 1em;
   }
+  .accesLiensSection .logosSection {
+    display: flex;
+
+    max-width: 20%;
+    height: 20%;
+  }
+  footer {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    display: block;
+    width: 100%;
+  }
+  .imgPresentation {
+    max-width: 100%;
+    text-align: center;
+  }
+  .imgNoirCouleur {
+    max-width: 20%;
+  }
+  .containeraPropos {
+    width: 60%;
+    margin: auto;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .allCamera {
+    display: none;
+  }
+  .formFlex {
+    display: flex;
+    clear: both;
+    width: 20em;
+    margin: auto;
+    margin-left: 5em;
+  }
+  .formFlex input {
+    margin-left: 2em;
+  }
+  .accesLiensSection .logosSection {
+    max-width: auto;
+    margin: 2em;
+  }
+  .accesLiensSection {
+    flex-direction: row;
+  }
+  .logosSection {
+    width: auto;
+    margin: auto;
+    flex-direction: row;
+  }
+  .lienBlog,
+  .lienCV {
+    width: 3em;
+    margin: 2em;
+  }
+  footer {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    display: block;
+    width: 100%;
+  }
+  .imgPresentation {
+    max-width: 100%;
+    text-align: center;
+  }
+  .imgNoirCouleur {
+    max-width: 20%;
+  }
+  .containeraPropos {
+    width: 75%;
+    margin: 2em;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .allCamera {
+    display: none;
+  }
+  .formFlex {
+    display: flex;
+    clear: both;
+    margin: auto;
+    width: 15em;
+  }
+  .formFlex input {
+    margin-left: 2em;
+  }
+  .accesLiensSection .logosSection {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 10em;
+  }
+  .lienBlog,
+  .lienCV {
+    margin: 1em;
+  }
+  .logosSection {
+    flex-direction: row;
+  }
+}
+footer {
+  margin: auto;
 }

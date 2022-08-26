@@ -20,44 +20,46 @@
           <li><a class="navMenu" href="accueil.html">Accueil</a></li>
           <li><a class="navMenu" href="#aPropos">A propos</a></li>
           <li><a class="navMenu" href="portfolio.html">Portfolio</a></li>
-          <li><a class="navMenu" href="#formSection">Contactez moi</a></li>
+          <li>
+            <a class="navMenu" href="#formulaireSection">Contactez moi</a>
+          </li>
         </ul>
       </nav>
     </header>
 
-    <!-- Caroussel - Scroll horizontal -->
+    <!-- Images -->
 
     <section>
       <div class="imgPresentation">
         <img
           class="imgNoirCouleur"
           id="imgTigreBlanc"
-          src="Select Photos/PanthereNeige.jpg"
+          src="SelectPhotos/PanthereNeige.jpg"
           alt="imgTigreBlanc"
         />
         <img
           class="imgNoirCouleur"
           id="imgAraignee"
-          src="Select Photos/Mygale.jpg"
+          src="SelectPhotos/Mygale.jpg"
           alt="imgAraignee"
         />
         <img
           class="imgNoirCouleur"
           id="imgOiseau"
-          src="Select Photos/Oiseau.jpg"
+          src="SelectPhotos/Oiseau.jpg"
           alt="imgOiseau"
         />
         <img
           class="imgNoirCouleur"
           id="imgLion"
-          src="Select Photos/Lion.jpg"
+          src="SelectPhotos/Lion.jpg"
           alt="imgLion"
         />
 
         <img
           class="imgNoirCouleur"
           id="imgMeduse"
-          src="Select Photos/Meduse.jpg"
+          src="SelectPhotos/Meduse.jpg"
           alt="imgMeduse"
         />
       </div>
@@ -65,54 +67,107 @@
       <div class="typeImg">Photographie animalière & nature</div>
     </section>
 
+    <!-- Citation -->
+
     <section class="quoteConfucius">
       <p>"Une image vaut mille mots."</p>
       <span>Confucius</span>
     </section>
 
+    <!-- A Propos -->
     <div class="containeraPropos">
-      <section class="aPropos" id="aPropos">
+      <section class="aProposSection" id="aPropos">
+        <div class="nomaPropos">Roselyne.</div>
         <p>
-          J'ai compris qu'un "clic" est révélateur d'un instant unique, presque magique, lors de ma
-          premier voyage. Et puis, j'ai continué de voyager et de sillonner les
-          chemins, de lever la tête et simplement d'observer. Mon appareil photo
-          m'a suivi au fil des années. Actuellement en reconversion vers un
-          autre métier, je suis en formation pour un titre professionnel
-          Concepteur Développeur d'Applications. Ainsi, afin de réunir une
-          passion qui a perduré et ce plaisir de programmer, je vous présente
-          mon portfolio.
+          Passionnée, pas toujours des plus patientes mais audacieuse, 3 mots
+          qui résument bien.
+        </p>
+        <p>
+          Depuis une dizaine d'années, mes petits plaisirs n'ont pas changés :
+          Un carnet de notes a portée de main pour écrire ce qui me passe par la
+          tête, l'appareil photo jamais loin, aller se balader, boire un bon
+          petit café. C'est quelque part comme ca que cette passion est arrivé
+          dans ma vie, au fil des promenades. Simplement amatrice, appréciant
+          les animaux, c'est eux mes principaux modèles, quand ce n'est pas dans
+          le coin d'une rue ou en plein milieu des champs.
+        </p>
+        <p>
+          Mais ce n'est pas tout. Ma curiosité naturelle m'a poussé à découvrir
+          des domaines, qui m'étaient encore inconnus la veille. Les jeux vidéos
+          ont fait de moi une geek, les petites balades ont été plus
+          aventurières qu'elles ne semblaient parfois. Observatrice et autonome,
+          je me suis alors intéressée de plus près à la programmation. De
+          manière autodidacte, j'ai appris l'HTML et le CSS et ai alors décidé
+          de me reconvertir. Je suis en formation pour pour devenir Conceptrice
+          Développeuse d'Applications (CDA).
+        </p>
+        <p>
+          Mon parcours, bien éloigné de ce domaine, m'a permis d'acquérir un esprit d'équipe solide et solidaire.
+          Désireuse d'en découvrir et d'en apprendre toujours plus, esprit évasif,
+          la photographie me donne presque le pouvoir de voyager sans aller forcément loin.
+          Sauf quand le monde de la programmation, l'esprit concentrée, me plonge loin de mes pensées.</p>
         </p>
       </section>
 
-        <img class="Rose" src="Select Photos/Moi.jpg" alt="Rose" />
+      <!-- Prépartion de l'HTML pour l'animation Appareil Photo en CSS. -->
 
+      <div class="allCamera">
+        <div class="blocCamera">
+          <div class="flashCamera"></div>
+          <div class="clicCamera"></div>
+          <div id="sortiePolaroid"></div>
+          <div id="ejectionPolaroid"></div>
+          <div class="colorCamera"></div>
+          <div class="mesures"></div>
+        </div>
+      </div>
     </div>
 
-    <section id="formSection">
-      <form method="post" action="javascript:alert('On envoie le formulaire');">
-        <div class="formFlex">
-          <label id="labelName" for="inputName">Nom</label>
-          <input id="inputName" type="text" placeholder="Votre nom" />
-          <label id="labelMail" for="inputMail">Email</label>
-          <input id="inputMail" type="email" placeholder="Votre email" />
-          <label id="labelMessage" for="fmessage">Un petit mot ?</label>
-          <textarea id="inputMessage" placeholder="Votre message"></textarea>
-          <input id="buttonEnvoi" type="submit" value="Envoyer" />
-        </div>
-      </form>
-    </section>
-
     <footer>
-      <div class="logos">
+
+      <!-- Formulaire de contact -->
+
+      <section id="formulaireSection">
+        <form
+          method="post"
+          action="javascript:alert('On envoie le formulaire');"
+        >
+          <div class="formFlex">
+            <label id="labelName" for="inputName">Nom</label>
+            <input id="inputName" type="text" placeholder="Votre nom" />
+            <label id="labelMail" for="inputMail">Email</label>
+            <input id="inputMail" type="email" placeholder="Votre email" />
+            <label id="labelMessage" for="fmessage">Un petit mot ?</label>
+            <textarea id="inputMessage" placeholder="Votre message"></textarea>
+            <input id="buttonEnvoi" type="submit" value="Envoyer" />
+          </div>
+        </form>
+      </section>
+
+      <!-- Accès liens internes -->
+
+      <div class="accesLiensSection">
+        <a class="lienBlog" href="blog.html">Blog</a>
+
+        <a class="lienCV" href="cv.html">CV</a>
+        </div>
+
+      <!-- Accès réseaux sociaux -->
+
+      <div class="logosSection">
         <a href="https://www.facebook.com/aza.photographies">
-          <img class="logoPage" src="Select Photos/logoFB.jpg" alt="logoFB"
+          <img class="logoPage" src="SelectPhotos/logoFB.jpg" alt="logoFB"
         /></a>
         <a href="https://www.linkedin.com/in/roselyne-fournier-3b546b176/">
-          <img class="logoPage" src="Select Photos/logoLinkedin.jpg" alt="logoLinkedin" />
+          <img class="logoPage" src="SelectPhotos/logoLinkedin.jpg" alt="logoLinkedin"/>
+        </a>
+        <a href="https://github.com/onzke">
+          <img class="logoPage" src="SelectPhotos/git.jpg" alt="logoGit" />
         </a>
       </div>
     </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
