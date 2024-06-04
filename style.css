@@ -1,0 +1,904 @@
+body {
+  background-color: #fff6ea;
+  font-family: "Georgia", Times, serif;
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+
+/*Header*/
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #bf8a3d;
+  height: 2em;
+  padding: 1.5em;
+  margin-left: 70em;
+  position: sticky;
+  top: 0;
+  z-index: 8;
+}
+nav {
+  width: 100%;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navMenu {
+  position: absolute;
+  top: 1.6em;
+  width: 1.2em;
+  height: 1.2em;
+  color: black;
+  
+}
+
+.navHome {
+  width: 1.4em;
+  height: 1.4em;
+  color: black;
+  background-image: url('SelectPhotos/home.png'); /* chemin vers votre image */
+    background-position: center; /* centrer l'image */
+    background-size: 2em;
+  border-radius: 50%;
+  transform:scale(1);
+}
+
+.navHome:is(:hover,:focus) {
+  width: 1.6em;
+  height: 1.6em;
+  animation: animPage 1s forwards linear;
+  transition-property: transform;
+  background-size: 2em;
+  transform:scale(1.2);
+}
+
+@keyframes animPage {
+  to {
+    transform: rotate(0deg);
+    transform:scale(1.4);
+  }
+  50%  {
+    transform: rotate(90deg);
+    background-image: url('SelectPhotos/home.png'); 
+    background-position: center; 
+    background-size: 2em;
+  }
+  from {
+    background-image: url('SelectPhotos/home.png'); 
+    background-position: center; 
+    transform: rotate(360deg);
+    background-size: 2em;
+    transform:scale(1.5);
+  }
+}
+
+.navAbout {
+  width: 1.4em;
+  height: 1.4em;
+  transform: rotate(0deg);
+  transform:scale(1);
+  background-image: url('SelectPhotos/super-girl.png'); /* chemin vers votre image */
+  background-position: center; /* centrer l'image */
+  background-size: 2em;
+  border-radius: 50%;
+}
+
+.navAbout:is(:hover,:focus) {
+  width: 1.6em;
+  height: 1.6em;
+  animation: animAbout 1s forwards linear;
+  transition-property: transform;
+  background-size: 2em;
+  transform:scale(1.2);
+
+}
+
+@keyframes animAbout {
+  0% {
+    transform: rotate(0deg);
+    transform: scale(1.4);
+    background-image: url('SelectPhotos/super-girl.png'); /* chemin vers votre image */
+    background-position: center; /* centrer l'image */
+    background-size: 2em;
+  }
+  50%  {
+    transform: rotate(90deg);
+    background-image: url('SelectPhotos/super-girl.png'); /* chemin vers votre image */
+    background-position: center; /* centrer l'image */
+    background-size: 2em;
+  }
+  100% {
+    background-image: url('SelectPhotos/super-girl.png'); /* chemin vers votre image */
+    background-position: center; /* centrer l'image */
+    transform: rotate(360deg);
+    background-size: 2em; 
+    transform:scale(1.5);
+  }
+}
+
+.navPortfolio {
+  width: 1.4em;
+  height: 1.4em;
+  transform: rotate(0deg);
+  transform:scale(1);
+  background-image: url('SelectPhotos/pictures.png'); /* chemin vers votre image */
+  background-position: center; /* centrer l'image */
+  background-size: 1.5em;
+  border-radius: 50%;
+}
+
+.navPortfolio:is(:hover,:focus) {
+  width: 1.6em;
+  height: 1.6em;
+  animation: animPortfolio 1s forwards linear;
+  transition-property: transform;
+  background-size: 2em;
+  transform:scale(1.2);
+
+}
+
+@keyframes animPortfolio {
+  0% {
+    transform: rotate(0deg);
+    transform: scale(1.4);
+    background-image: url('SelectPhotos/pictures.png'); /* chemin vers votre image */
+    background-position: center; /* centrer l'image */
+    background-size: 2em;
+  }
+  50%  {
+    transform: rotate(90deg);
+    background-image: url('SelectPhotos/pictures.png'); /* chemin vers votre image */
+    background-position: center; /* centrer l'image */
+    background-size: 2em;
+  }
+  100% {
+    background-image: url('SelectPhotos/pictures.png'); /* chemin vers votre image */
+    background-position: center; /* centrer l'image */
+    transform: rotate(360deg);
+    background-size: 2em; 
+    transform:scale(1.5);
+  }
+}
+
+.navContact{
+  width: 1.4em;
+  height: 1.4em;
+  transform: rotate(0deg);
+  transform:scale(1);
+  background-image: url('SelectPhotos/contact.png'); /* chemin vers votre image */
+  background-position: center; /* centrer l'image */
+  background-size: 2em;
+  border-radius: 50%;
+}
+
+.navContact:is(:hover,:focus) {
+  width: 1.6em;
+  height: 1.6em;
+  animation: animContact 1s forwards linear;
+  transition-property: transform;
+  background-size: 2em;
+  transform:scale(1.2);
+
+}
+
+@keyframes animContact {
+  0% {
+    transform: rotate(0deg);
+    transform: scale(1.4);
+    background-image: url('SelectPhotos/contact.png'); /* chemin vers votre image */
+    background-position: center; /* centrer l'image */
+    background-size: 2em;
+  }
+  50%  {
+    transform: rotate(90deg);
+    background-image: url('SelectPhotos/contact.png'); /* chemin vers votre image */
+    background-position: center; /* centrer l'image */
+    background-size: 2em;
+  }
+  100% {
+    background-image: url('SelectPhotos/contact.png'); /* chemin vers votre image */
+    background-position: center; /* centrer l'image */
+    transform: rotate(360deg);
+    background-size: 2em; 
+    transform:scale(1.5);
+  }
+}
+
+/* Animation Appareil Photo */
+
+.allCamera {
+  width: 400px;
+  height: 300px;
+  margin: 2em 0em 0em 2em;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.blocCamera {
+  position: relative;
+  margin: 50px auto;
+  width: 400px;
+  height: 250px;
+  border-radius: 30px;
+  background-color: #222222; /*Couleur de l'appareil photo*/
+}
+.flashCamera {
+  position: absolute;
+  left: 35px;
+  top: 35px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #f4fefe;
+  animation: animFlash 0.5s ease-out 0s infinite;
+}
+@keyframes animFlash {
+  75% {
+    background-color: red;
+  }
+}
+.clicCamera {
+  position: absolute;
+  left: 320px;
+  bottom: 180px;
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  background-color: midnightblue;
+  box-shadow: 2px 2px 2px 2px black;
+  outline: none;
+  z-index: 3;
+  cursor: pointer;
+  background-image: radial-gradient(
+    at center,
+    #838383 0%,
+    #838383 8%,
+    #161616 4%,
+    #161616 15%,
+    #222222 15%,
+    #222222 25%,
+    #333444 55%,
+    #111f23 70%,
+    #e4ecf3 60%,
+    #111111 40%,
+    #111111 55%,
+    #000000 55%,
+    #222444 750%
+  );
+}
+.clicCamera:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  box-shadow: 2px 2px black;
+  background-image: radial-gradient(
+    at center,
+    #838383 0%,
+    #838383 8%,
+    #161616 4%,
+    #161616 15%,
+    #222222 15%,
+    #222222 25%,
+    #333444 55%,
+    #111f23 70%,
+    #e4ecf3 60%,
+    #111111 40%,
+    #111111 55%,
+    #000000 55%,
+    #222444 750%,
+    #e4ecf3 1000%
+  );
+}
+#sortiePolaroid {
+  position: absolute;
+  right: 75px;
+  bottom: 30px;
+  width: 260px;
+  height: 20px;
+  background-image: linear-gradient(
+    rgb(43, 45, 56) 25%,
+    #494949 10%,
+    #494949 50%,
+    #494949 15%,
+    rgb(43, 45, 56) 25%
+  );
+  z-index: 1;
+}
+
+.colorCamera {
+  width: 40px;
+  height: 75px;
+  position: absolute;
+  bottom: 175px;
+  left: 185px;
+  background: linear-gradient(
+    to right,
+    red 15%,
+    orange 35%,
+    yellow 50%,
+    rgb(93, 179, 93) 70%,
+    blue 85%
+  );
+}
+
+.mesures {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-image: radial-gradient(
+    at center,
+    #838383 0%,
+    #838383 4%,
+    #161616 4%,
+    #161616 15%,
+    #222222 15%,
+    #222222 25%,
+    #3c3c3c 25%,
+    #3c3c3c 40%,
+    #111111 40%,
+    #111111 55%,
+    #b44b37 55%,
+    #b44b37 50%
+  );
+  position: absolute;
+  top: 60px;
+  left: 145px;
+  z-index: 0;
+}
+
+.presentation {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-right: 10em;
+  
+}
+h1 {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 15em;
+  font-size: 48px;
+}
+
+.namePresentation  {
+  font-family: "Inspiration";
+  font-size: 48px;
+  padding: 0.5em;
+  position: relative;
+  right: -1.5em;
+  top: 0em;
+  width: 8em;
+  margin: auto;
+  border-right: 2px solid transparent;
+  line-height: 1em;
+  height: 1em;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  visibility: hidden;
+} 
+
+.anim-typewriter {
+  animation: typewriter 2s steps(40) 1s 1 normal both,
+  blinkTextCursor 500ms steps(40) 1s  8 normal;
+}
+
+@keyframes typewriter {
+  from {
+    visibility: hidden;
+        width: 0em;
+  }
+  to {
+    visibility: visible;
+        width: 8em;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: transparent;
+  }
+  to {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+}
+
+
+/*A propos */
+
+
+.containeraPropos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2em;
+  width: 90%;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.aProposSection {
+  display: flex;
+  flex-direction: column;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background: #b48b4f;
+  text-align: justify;
+  line-height: 1.5em;
+  flex-wrap: wrap;
+  padding: 2em;
+  width: 90%;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.textPresentation  {
+  margin-left: 2em;
+  visibility: hidden;
+  animation: fadeIn 5s 2s forwards;
+}
+
+.textPresentation-one  {
+  display: flex;
+  align-items: center;
+  margin-left: 4em;
+  visibility: hidden;
+  animation: fadeIn 5s 3s forwards;
+}
+
+.aboutImg {
+  width: 2em;
+  height: 2em;
+  margin: 0.5em;
+}
+
+@keyframes fadeIn {
+  0% { 
+    visibility: visible;
+    opacity:  0; }
+  100% { 
+    visibility: visible;
+     opacity: 1; }
+}
+
+
+
+/* Skills */
+
+.containerHardSkills {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  padding: 2em;
+}
+
+.HardSkills {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 20em;
+  font-family: "Inspiration";
+  font-size: 48px;
+  padding: 0.5em;
+ 
+}
+
+.Skills {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-direction: row;
+  font-weight: bold;
+  padding: 2em;
+  margin: 0em 5em 0em 3em;
+  width: 10em;
+}
+.nameSkill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.imgSkills {
+  display: flex;
+  width: 5em;
+}
+.loading-bar {
+  display: flex;
+  width: auto;
+  height: 20px;
+  margin: 0em 3em 0em 10em;
+  padding: 1em;
+  border: 1px solid black;
+}
+
+.load { 
+  width: 300px;
+  height: 20px;
+  background-color: #f0f0f0;
+ }
+
+ .levelSkill {
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 2em;
+ }
+
+ @keyframes animate {
+  0%   {width: 0px; background-color:#4caf50; left:0px; top:0px;}
+  80%  {background-color:#4caf50; left:200px; top:0px;}
+
+}
+
+.progressHTML {
+  width: 80%;
+  height: 100%;
+  background-color: #4caf50;
+  margin: 0em;
+  transition: width 2s, height 4s;
+  animation: anim 4s;
+}
+
+.progressCSS {
+  width: 80%;
+  height: 100%;
+  background-color: #4caf50;
+  margin: 0em;
+   animation: anim 4s;
+}
+
+.progressJS {
+  width: 60%;
+  height: 100%;
+  background-color: #4caf50;
+  margin: 0em;
+   animation: anim 4s;
+}
+
+.progressC {
+  width: 20%;
+  height: 100%;
+  background-color: #4caf50;
+  margin: 0em;
+   animation: anim 4s;
+}
+
+@keyframes anim {
+  0%   {width: 0px; background-color:#4caf50; left:0px; top:0px;}
+  80%  {background-color:#4caf50; left:200px; top:0px;}
+
+}
+
+/* Footer */
+
+/* Formulaire de contact */
+
+
+#formulaireSection {
+  display: flex;
+  justify-content: space-around;
+}
+
+.formFlex {
+  display: flex;
+  line-height: 2em;
+  width: 45em;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.formFlex input {
+  flex-direction: column;
+  border: 1px solid black;
+  height: 2.5em;
+  width: 20em;
+  margin: 0em 1em 1em 1em;
+}
+
+.formFlex textarea {
+  border: 1px solid black;
+  border-radius: 1em;
+  margin: 1em;
+  padding: 1em;
+  width: 48em;
+  height: 5em;
+}
+
+.formFlex input[type="submit"] {
+  flex-direction: row;
+  background-color: #b48b4f;
+  width: 50em;
+  color: white;
+  line-height: 0.4em;
+  padding: 1.5em;
+}
+
+.formFlex input[type="submit"]:hover {
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+/* Accès au blog, au CV */
+
+.accesLiensSection {
+  display: flex;
+ padding-left: 3em;
+  margin: auto;
+}
+
+.lienBlog,
+.lienCV {
+  line-height: 1.5em;
+  text-align: center;
+  margin: 1em;
+  background-color: #808000;
+  width: 10em;
+  height: 2em;
+  padding: 1em;
+  text-decoration: none;
+  color: black;
+}
+.lienBlog:hover,
+.lienCV:hover {
+  color: white;
+  font-weight: bold;
+}
+
+/* Contact - Réseaux Sociaux*/
+
+.logosSection {
+  display: flex;
+  margin: auto;
+  padding-right: 4em;
+}
+
+.logosSection .logoPage {
+  background-color: #fff6ea;
+  cursor: pointer;
+  max-width: 1.5em;
+  margin: 1em 1em 0em 0em;
+  max-height: 1.5em;
+}
+.logoPage:hover {
+  opacity: 75%;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #fff6ea;
+  margin-top: 2em;
+  width: 50%;
+  
+}
+
+/*Page Portfolio*/
+
+/* Barre de navigation */
+
+.navPortfolioFilter {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttonPortfolio {
+  margin: 2em;
+  padding: 1em;
+  border: none;
+  background-color: #808000;
+  cursor: pointer;
+  transition: 600ms ease;
+}
+
+.buttonPortfolio:hover {
+  color: white;
+  padding: auto;
+  font-weight: bold;
+}
+.buttonPortfolio:focus {
+  color: #808000;
+  background-color: #fff6ea;
+  font-weight: bold;
+}
+
+/* Portfolio - Affichage des photos */
+
+#portfolioEnsemble {
+  margin: 1em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100em;
+}
+
+#portfolioEnsemble .imgBox {
+  margin: 2em;
+}
+
+#portfolioEnsemble .imgBox.cache {
+  display: none;
+}
+
+/* Design des photos */
+
+.imgBox {
+  height: 20em;
+  margin-right: auto;
+  filter: grayscale(1);
+  width: auto;
+}
+.imgBox:hover {
+  filter: grayscale(0);
+}
+
+/* Page CV */
+/* Mise en page de l'image */
+
+.cvSection {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Adaptation du design via media queries*/
+
+@media screen and (max-width: 900px) {
+  body {
+    display: block;
+    width: 100%;
+  }
+  .imgPresentation {
+    max-width: 100%;
+    text-align: center;
+  }
+  .imgNoirCouleur {
+    max-width: 20%;
+  }
+  .containeraPropos {
+    width: 80%;
+    margin: auto;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .allCamera {
+    width: 50%;
+    margin: auto;
+  }
+  .formFlex {
+    display: flex;
+    clear: both;
+    width: 20em;
+    margin: auto;
+  }
+  .formFlex input {
+    margin: 1em;
+  }
+  .accesLiensSection .logosSection {
+    display: flex;
+
+    max-width: 20%;
+    height: 20%;
+  }
+  footer {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    display: block;
+    width: 100%;
+  }
+  .imgPresentation {
+    max-width: 100%;
+    text-align: center;
+  }
+  .imgNoirCouleur {
+    max-width: 20%;
+  }
+  .containeraPropos {
+    width: 60%;
+    margin: auto;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .allCamera {
+    display: none;
+  }
+  .formFlex {
+    display: flex;
+    clear: both;
+    width: 20em;
+    margin: auto;
+    margin-left: 5em;
+  }
+  .formFlex input {
+    margin-left: 2em;
+  }
+  .accesLiensSection .logosSection {
+    max-width: auto;
+    margin: 2em;
+  }
+  .accesLiensSection {
+    flex-direction: row;
+  }
+  .logosSection {
+    width: auto;
+    margin: auto;
+    flex-direction: row;
+  }
+  .lienBlog,
+  .lienCV {
+    width: 3em;
+    margin: 2em;
+  }
+  footer {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    display: block;
+    width: 100%;
+  }
+  .imgPresentation {
+    max-width: 100%;
+    text-align: center;
+  }
+  .imgNoirCouleur {
+    max-width: 20%;
+  }
+  .containeraPropos {
+    width: 75%;
+    margin: 2em;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .allCamera {
+    display: none;
+  }
+  .formFlex {
+    display: flex;
+    clear: both;
+    margin: auto;
+    width: 15em;
+  }
+  .formFlex input {
+    margin-left: 2em;
+  }
+  .accesLiensSection .logosSection {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 10em;
+  }
+  .lienBlog,
+  .lienCV {
+    margin: 1em;
+  }
+  .logosSection {
+    flex-direction: row;
+  }
+}
+footer {
+  margin: auto;
+}

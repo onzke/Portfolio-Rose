@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Roselyne Fournier - Book</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inspiration&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Header et barre de navigation -->
+
+    <header>
+      <nav>
+        <ul>
+          <li><a class="navMenu navHome"  href="#accueil"> </a> </li>
+          <li><a class="navMenu navAbout" href="#aPropos"></a></li>
+          <li><a class="navMenu navPortfolio" href="portfolio.html"></a></li>
+          <li><a class="navMenu navContact" href="#formulaireSection"></a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <div class="containeraPropos">
+<div class="allCamera">
+  <div class="blocCamera">
+    <div class="flashCamera"></div>
+    <div class="clicCamera"></div>
+    <div id="sortiePolaroid"></div>
+    <div id="ejectionPolaroid"></div>
+    <div class="colorCamera"></div>
+    <div class="mesures"></div>
+  </div>
+</div>
+
+<section class="presentation">
+<h1>Hello ! Me, it's...<div class="namePresentation anim-typewriter">Roselyne Fournier.</div>une future développeuse</h1>
+</section>
+    <!-- A Propos -->
+ 
+      <section class="aProposSection" id="aPropos">
+        <p class="textPresentation">
+         Un profil original :
+        </p>
+        <p class="textPresentation-one">
+          <img class="aboutImg" src="SelectPhotos/industrie.png"/>
+         En reconversion professionnelle après plusieurs années d'expérience en industrie & logistique.
+        </p>
+        <p class="textPresentation-one">
+          <img class="aboutImg" src="SelectPhotos/exercise.png"/>
+          Amatrice de photographie et de course à pied.
+        </p>
+        <p class="textPresentation-one">
+          <img class="aboutImg" src="SelectPhotos/coding.png"/>
+        Autodidacte en programmation, mon petit faible est le front-end.
+        </p>
+      </div>
+      </section>
+    </div>
+  </div>
+
+      <!-- Prépartion de l'HTML pour l'animation Appareil Photo en CSS. -->
+
+  <div class="containerHardSkills">
+    <section class="HardSkills">Mes compétences</section>
+
+      <div class="Skills">
+        <div class="nameSkill">HTML
+          <img class="imgSkills" src="SelectPhotos/HTML.png" alt="imgHTML"/>
+        </div>
+            <div class="loading-bar">
+             <div class="load" id="load">
+            <div class="progressHTML"></div>
+        </div>
+        <span class="levelSkill">80%</span>
+      </div>
+ 
+  
+  <div class="Skills">
+    <div class="nameSkill">CSS
+    <img class="imgSkills" src="SelectPhotos/css.png" alt="imgCSS"/>
+  </div>
+      <div class="loading-bar">
+        <div class="load" id="load">
+      <div class="progressCSS"></div>
+      </div>
+      <span class="levelSkill">80%</span>
+  </div>
+</div>
+</div>
+
+<div class="Skills">
+  <div class="nameSkill">Javascript
+  <img class="imgSkills" src="SelectPhotos/javascript.png" alt="imgJS"/>
+</div>
+    <div class="loading-bar">
+      <div class="load" id="load">
+    <div class="progressJS"></div>
+    </div>
+    <span class="levelSkill">60%</span>
+</div>
+
+
+<div class="Skills">
+  <div class="nameSkill">C++
+  <img class="imgSkills" src="SelectPhotos/c++.png" alt="imgC++"/>
+</div>
+    <div class="loading-bar">
+      <div class="load" id="load">
+    <div class="progressC"></div>
+    </div>
+    <span class="levelSkill">20%</span>
+</div>
+</div>
+</div>
+
+<div class="Skills">
+  <div class="nameSkill">Figma
+  <img class="imgSkills" src="SelectPhotos/figma.png" alt="imgJS"/>
+</div>
+    <div class="loading-bar">
+      <div class="load" id="load">
+    <div class="progressJS"></div>
+    </div>
+    <span class="levelSkill">40%</span>
+</div>
+
+<div class="Skills">
+  <div class="nameSkill">Gimp
+  <img class="imgSkills" src="SelectPhotos/gimp.png" alt="imgJS"/>
+</div>
+    <div class="loading-bar">
+      <div class="load" id="load">
+    <div class="progressJS"></div>
+    </div>
+    <span class="levelSkill">50%</span>
+</div>
+
+</div>
+</div>
+</div>
+
+
+    <footer>
+
+      <!-- Formulaire de contact -->
+
+      <section id="formulaireSection">
+        <form
+          method="post"
+          action="javascript:alert('On envoie le formulaire');"
+        >
+          <div class="formFlex">
+            <label id="labelName" for="inputName">Nom</label>
+            <input id="inputName" type="text" placeholder="Votre nom" />
+            <label id="labelMail" for="inputMail">Email</label>
+            <input id="inputMail" type="email" placeholder="Votre email" />
+            <label id="labelMessage" for="fmessage">Un petit mot ?</label>
+            <textarea id="inputMessage" placeholder="Votre message"></textarea>
+            <input id="buttonEnvoi" type="submit" value="Envoyer" />
+          </div>
+        </form>
+      </section>
+
+      <!-- Accès liens internes -->
+
+      <div class="accesLiensSection">
+        <a class="lienBlog" href="blog.html">Blog</a>
+
+        <a class="lienCV" href="cv.html">CV</a>
+        </div>
+
+      <!-- Accès réseaux sociaux -->
+
+      <div class="logosSection">
+        <a href="https://www.facebook.com/aza.photographies">
+          <img class="logoPage" src="SelectPhotos/logoFB.jpg" alt="logoFB"
+        /></a>
+        <a href="https://www.linkedin.com/in/roselyne-fournier-3b546b176/">
+          <img class="logoPage" src="SelectPhotos/logoLinkedin.jpg" alt="logoLinkedin"/>
+        </a>
+        <a href="https://github.com/onzke">
+          <img class="logoPage" src="SelectPhotos/git.jpg" alt="logoGit" />
+        </a>
+      </div>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
